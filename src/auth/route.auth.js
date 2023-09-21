@@ -8,9 +8,7 @@ authRoute.get("/auth", (req, res) => {
 });
 
 authRoute.post("/auth/register", controller.registerController);
-// userRoute.get("/user/:id", controller.getUserSingleController);
-// userRoute.put("/user/update", tokenVerification, controller.updateController);
-// userRoute.delete("/user/delete/:id", controller.deleteController);
-// userRoute.post("/user/login", authController);
+authRoute.post("/auth/login", controller.loginController);
+authRoute.post("/auth/forget_password", controller.forgetController);
 
 module.exports = authRoute;
